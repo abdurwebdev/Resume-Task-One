@@ -1,0 +1,41 @@
+@font-face {
+  font-family: danger;
+  src: url(./Another\ Danger\ -\ Demo.otf);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+main {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+  height: 100%;
+  background-color: #111;
+  background-size: cover;
+  position: relative;
+}
+:root{
+  --x:400px;
+  --y:400px;
+}
+main video{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.box{
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle 100px at var(--x) var(--y),rgba(255, 255, 255, 0),black);
+  position: absolute;
+  top: 0;
+  left: 0;
+}

@@ -1,0 +1,28 @@
+@font-face {
+  font-family: danger;
+  src: url(./Another\ Danger\ -\ Demo.otf);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  font-family: gilroy;
+  color: aliceblue;
+}
+
+main {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+  height: 100%;
+  background-color: #111;
+  background-size: cover;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+}

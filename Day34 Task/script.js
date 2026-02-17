@@ -1,6 +1,5 @@
-var a;
-for(a = 0;a<5;a++){
+for(var a = 0;a<5;a++){
    setTimeout(()=>{
-      console.log(a)
+      console.log(a);
    },1000)
 }

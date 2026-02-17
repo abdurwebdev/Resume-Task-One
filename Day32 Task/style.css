@@ -110,3 +110,20 @@ i{
 .love .loveme{
   color: red;
 }
+.mute{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #11111119;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  cursor: pointer;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.mute i{
+  font-size: 20px;
+}
