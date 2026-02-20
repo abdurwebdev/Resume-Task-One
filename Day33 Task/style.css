@@ -1,7 +1,15 @@
 @font-face {
   font-family: danger;
+  src: url(./Another\ Danger\ Slanted\ -\ Demo.otf);
+}
+@font-face {
+  font-family: dangeradas;
   src: url(./Another\ Danger\ -\ Demo.otf);
 }
+h1 {
+  font-family: danger;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -58,8 +66,4 @@ main .right .pop {
   main .left, main .right {
     width: 100%;
   }
-}
-h1 {
-  font-family: danger;
-  color: #fff;
 }/*# sourceMappingURL=style.css.map */
