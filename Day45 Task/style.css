@@ -1,0 +1,116 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+  background: #000;
+  color: #fff;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Main Container */
+.container{
+  width: 1000px;
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Top Section */
+.top-section{
+  flex: 1;
+  display: flex;
+}
+
+/* Left Side */
+.left{
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main-cover{
+  width: 400px;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 0 25px rgba(255,255,255,0.15);
+}
+
+/* Right Side */
+.right{
+  width: 50%;
+  padding: 30px;
+}
+
+.right h2{
+  margin-bottom: 20px;
+}
+
+/* Song List */
+.song-list{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.song{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  border-bottom: 1px solid #222;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.song:hover{
+  background: #111;
+}
+
+.song-left{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.song-left img{
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+/* Bottom Controls */
+.controls{
+  height: 80px;
+  background: #111;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  border-top: 1px solid #222;
+}
+
+.controls button{
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  border: none;
+  background: #222;
+  color: #fff;
+  font-size: 18px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.controls button:hover{
+  background: #444;
+}

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JS Shop Practice</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>My JS Store</h1>
+
+    <div class="search-container">
+      <input type="text" id="searchInput" placeholder="Search products...">
+    </div>
+
+    <div class="counts">
+      <a href="cart.html" style="text-decoration: none; color: white;"><span>🛒 Cart: <span id="cartCount">0</span></span></a>
+      <a href="fav.html" style="text-decoration: none; color: white;"><span>❤️ Favourites: <span id="favCount">0</span></span></a>
+    </div>
+  </header>
+
+  <main>
+    <div class="products" id="productsContainer">
+      <!-- JS should render products here -->
+    </div>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,body{
+  width: 100%;
+  height: 100%;
+}
+main{
+  width: 100%;
+  min-height: 100%;
+  background-color: #111;
+  padding: 20px;
+}
+#search>input{
+  width: 100%;
+  padding: 10px 20px;
+  border-radius: 20px;
+  border: none;
+  outline: none;
+}
+#search{
+  display: flex;
+  gap: 10px;
+}
+#search button{
+  padding: 10px 20px;
+  border-radius: 20px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+#search button:active{
+  scale: 0.95;
+}
+.gridie{
+  width: 100%;
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.gridie img{
+  width: 24%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 20px;
+}
