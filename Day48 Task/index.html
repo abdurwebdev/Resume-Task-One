@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Productivity Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<div class="dashboard">
+
+  <!-- Top Bar -->
+  <div class="topbar">
+    <h2>Productivity Dashboard</h2>
+    <button class="theme-btn">Change Theme</button>
+  </div>
+
+  <!-- Time + Weather -->
+  <div class="hero">
+    <div class="hero-left">
+      <p></p>
+      <h1 id="time"><span></span>, <span class="timei"></span></h1>
+      <span id="cityMeri"></span>
+    </div>
+
+    <div class="hero-right">
+      <h1></h1>
+      <p>Light Rain</p>
+      <small>Humidity: <span id="humid"></span> | Wind: <span id="wind"></span></small>
+    </div>
+  </div>
+
+  <!-- Cards Section -->
+  <div class="cards">
+
+    <!-- To Do -->
+    <div class="card">
+      <h3>To Do List</h3>
+      <input type="text" placeholder="Add task..." />
+      <button id="addTask">Add Task</button>
+      <ul class="list">
+        
+      </ul>
+    </div>
+
+    <!-- Daily Planner -->
+<div class="card">
+  <h3>Daily Planner</h3>
+  <div class="planner">
+    <input type="text" class="planner-input" data-id="0" placeholder="6-7 AM">
+    <input type="text" class="planner-input" data-id="1" placeholder="8-9 AM">
+    <input type="text" class="planner-input" data-id="2" placeholder="10-12 PM">
+    <input type="text" class="planner-input" data-id="3" placeholder="2-3 PM">
+    <input type="text" class="planner-input" data-id="4" placeholder="6-7 PM">
+  </div>
+</div>
+    <!-- Motivation -->
+    <div class="card">
+      <h3>Motivation</h3>
+      <p class="quote">
+        "Success doesn’t come from motivation, it comes from discipline."
+      </p>
+    </div>
+
+    <!-- Pomodoro -->
+    <div class="card">
+      <h3 id="timiee">Work Session</h3>
+      <div class="timer">25:00</div>
+      <div class="timer-buttons">
+        <button id="startTimer">Start</button>
+        <button id="pauseTimer">Pause</button>
+        <button id="resetTimer">Reset</button>
+      </div>
+    </div>
+
+    <!-- Extra: Notes (My Choice) -->
+    <div class="card">
+      <h3>Quick Notes</h3>
+      <textarea placeholder="Write your thoughts..."></textarea>
+      <button class="action-btn">Save Note</button>
+    </div>
+
+  </div>
+
+</div>
+<script src="script.js"></script>
+</body>
+</html>

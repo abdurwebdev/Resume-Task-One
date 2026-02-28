@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Productivity App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="light">
+
+<div class="app">
+
+  <!-- Header -->
+  <header class="header">
+    <h1>Productivity Dashboard</h1>
+    <button id="themeToggle">Change Theme</button>
+  </header>
+
+  <!-- Top Section -->
+  <div class="top-section">
+
+    <!-- Weather Card -->
+    <div class="card weather-card">
+      <h2>Weather</h2>
+      <div class="weather-info">
+        <p id="city">City</p>
+        <h3 id="temperature">--°C</h3>
+        <p id="condition">Condition</p>
+      </div>
+      <input type="text" id="cityInput" placeholder="Enter city">
+      <button id="getWeather">Get Weather</button>
+    </div>
+
+    <!-- Quote Card -->
+    <div class="card quote-card">
+      <h2>Daily Quote</h2>
+      <p id="quoteText">Click below to get a quote</p>
+      <button id="newQuote">New Quote</button>
+    </div>
+
+    <!-- Timer Card -->
+    <div class="card timer-card">
+      <h2>Study Timer (15 min)</h2>
+      <h1 id="timerDisplay"><span id="min">15</span>:<span id="sec">00</span></h1>
+      <div class="timer-buttons">
+        <button id="startTimer">Start</button>
+        <button id="resetTimer">Reset</button>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Task Section -->
+  <div class="card task-card">
+    <h2>Tasks</h2>
+
+    <div class="task-input">
+      <input type="text" id="taskText" placeholder="Enter task">
+      <input type="date" id="taskDate">
+      <button id="addTask">Add Task</button>
+    </div>
+
+    <ul id="taskList">
+      <!-- Tasks will appear here -->
+      <!-- Example structure for JS -->
+      <!--
+      <li>
+        <span>Task name - 2026-02-25</span>
+        <button class="delete">X</button>
+      </li>
+      -->
+    </ul>
+  </div>
+
+</div>
+<script src="script.js"></script>
+</body>
+</html>

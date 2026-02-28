@@ -1,0 +1,187 @@
+:root{
+  --prim:#2b1205;
+  --sec:#4a2512;
+  --btn:#f4a62a;
+  --tex:#6b3a1e;
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family: Arial, sans-serif;
+}
+
+body{
+  background:var(--prim);
+  color:white;
+}
+
+/* Container */
+.dashboard{
+  padding:20px;
+}
+
+/* Topbar */
+.topbar{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:20px;
+}
+
+.theme-btn{
+  padding:8px 16px;
+  border:none;
+  background:var(--btn);
+  color:#fff;
+  border-radius:6px;
+  cursor:pointer;
+}
+
+/* Hero Section */
+.hero{
+  background:url("https://images.unsplash.com/photo-1506744038136-46273834b3fb");
+  background-size:cover;
+  background-position:center;
+  border-radius:12px;
+  padding:30px;
+  display:flex;
+  justify-content:space-between;
+  margin-bottom:25px;
+}
+
+.hero-left h1{
+  font-size:32px;
+}
+
+.hero-right{
+  text-align:right;
+}
+
+/* Cards */
+.cards{
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+  gap:20px;
+}
+
+/* Card Style */
+.card{
+  background:var(--sec);
+  padding:18px;
+  border-radius:12px;
+  height:220px;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+  overflow-y: auto;
+}
+
+.card h3{
+  margin-bottom:10px;
+}
+
+/* Inputs */
+.card input,
+.card textarea{
+  width:100%;
+  padding:8px;
+  margin-bottom:10px;
+  border:none;
+  border-radius:6px;
+}
+
+.card textarea{
+  height:100px;
+  resize:none;
+}
+
+/* List */
+.list{
+  list-style:none;
+  overflow-y: auto;
+}
+
+.list li{
+  background:var(--tex);
+  padding:6px;
+  margin-bottom:5px;
+  border-radius:4px;
+}
+
+/* Planner */
+.planner div{
+  background:var(--tex);
+  padding:6px;
+  margin-bottom:5px;
+  border-radius:4px;
+  font-size:14px;
+}
+
+/* Motivation */
+.quote{
+  font-style:italic;
+  margin-bottom:10px;
+}
+
+/* Buttons */
+.action-btn{
+  background:var(--btn);
+  border:none;
+  padding:8px;
+  border-radius:6px;
+  color:white;
+  cursor:pointer;
+}
+
+/* Pomodoro */
+.timer{
+  font-size:36px;
+  text-align:center;
+  margin:10px 0;
+}
+
+.timer-buttons{
+  display:flex;
+  gap:10px;
+}
+
+.timer-buttons button{
+  flex:1;
+  padding:8px;
+  border:none;
+  border-radius:6px;
+  background:var(--btn);
+  color:white;
+  cursor:pointer;
+}
+#addTask{
+  margin-bottom: 10px;
+  padding: 10px 15px;
+  background-color: var(--btn);
+  outline: none;
+  cursor: pointer;
+  border: none;
+  transition: all ease .2s;
+  color: #fff;
+  border-radius: 10px;
+}
+#addTask:active{
+  scale: 0.97;
+}
+
+.planner {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.planner-input {
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  background-color: #7a3d1c;
+  color: white;
+  font-size: 16px;
+}

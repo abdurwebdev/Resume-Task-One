@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>OS Simulation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Desktop -->
+    <div class="desktop" id="desktop">
+
+        <!-- Desktop Icons -->
+        <div class="icon" id="myComputer">
+            <div class="icon-img">🖥️</div>
+            <p>My Computer</p>
+        </div>
+
+        <div class="icon" id="documents">
+            <div class="icon-img">📁</div>
+            <p>Documents</p>
+        </div>
+
+        <!-- Window (Hidden by default) -->
+        <div class="window" id="window1">
+            <div class="window-header">
+                <span>My Computer</span>
+                <button id="closeWindow">✖</button>
+            </div>
+            <div class="window-body">
+                <p>This is a window content.</p>
+            </div>
+        </div>
+
+        <!-- Right Click Context Menu (Hidden) -->
+        <div class="context-menu" id="contextMenu">
+            <ul>
+                <li>Refresh</li>
+                <li>New Folder</li>
+                <li>Settings</li>
+            </ul>
+        </div>
+
+    </div>
+
+    <!-- Taskbar -->
+    <div class="taskbar">
+        <div class="start">Start</div>
+        <div class="task-time">12:00 PM</div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
