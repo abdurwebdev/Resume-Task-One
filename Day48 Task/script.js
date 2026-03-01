@@ -40,7 +40,6 @@ async function getWeatherData() {
   heroLeft.innerHTML = `${day} ${month}, ${year}`;
 
   let city = "Rawalpindi";
-  let apiKey = `520c5c31b9049339f26eb0c5ee320fdb`;
   let blob = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`);
   let data = await blob.json();
   console.log(data);

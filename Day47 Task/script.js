@@ -1,5 +1,4 @@
 async function getWeather(city){
-    let apiKey = `520c5c31b9049339f26eb0c5ee320fdb`;
     let blob = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`);
     let data = await blob.json();
     let cityName = document.getElementById("city");
