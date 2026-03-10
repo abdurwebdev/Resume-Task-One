@@ -1,0 +1,41 @@
+*{
+  font-family: gilroy;
+}
+.cards{
+  display: flex;
+  flex-wrap: wrap;
+  overflow: auto;
+  color: #fff;
+  gap: 20px;
+  // background-color: bisque;
+  .card{
+    width: fit-content;
+    padding: 10px;
+    flex-grow: 1;
+    height: fit-content;
+    background-color: #fff;
+    color: black;
+    border-radius: 10px;
+    gap: 10px;
+    img{
+      width: 100%;
+      height: 100px;
+      object-fit: cover;
+    }
+    .foot{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .tags{
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      h1{
+        padding: 5px 10px;
+        border-radius: 10px;
+      background-color: antiquewhite;
+      }
+    }
+  }
+}
