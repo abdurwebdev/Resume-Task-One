@@ -24,6 +24,7 @@ const RecipieCard = ({ elem, index }) => {
         >
           {elem.category}
         </span>
+        
       </div>
     </Link>
   );

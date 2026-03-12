@@ -4,6 +4,7 @@ import CreateRecipie from './pages/CreateRecipie.jsx'
 import Dashborad from './Layout/Dashborad.jsx'
 import {createBrowserRouter, RouterProvider} from 'react-router-dom';
 import Home from './pages/Home.jsx'
+import Fav from './pages/Fav.jsx';
 
 const router = createBrowserRouter([
   {
@@ -21,6 +22,10 @@ const router = createBrowserRouter([
       {
         path:'/create',
         element:<CreateRecipie/>
+      },
+      {
+        path:'/fav',
+        element:<Fav/>
       }
     ]
   }

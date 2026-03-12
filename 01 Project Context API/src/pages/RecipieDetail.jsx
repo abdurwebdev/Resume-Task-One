@@ -1,15 +1,18 @@
-import React, { useContext } from 'react'
+import React, { useContext, useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 import { RecipieContext } from '../context/RecipieProvider'
 import { useForm } from 'react-hook-form'
 import { toast } from 'sonner'
+import { FavContext } from '../context/FavProvider'
 
 const RecipieDetail = () => {
   const { id } = useParams()
   const recipieIndex = parseInt(id)
-  const navigate = useNavigate()
+  const navigate = useNavigate();
+  const [isfav, setisFav] = useState(false);
   const [recipie, setRecipie] = useContext(RecipieContext)
-  const recipieToShow = recipie[recipieIndex]
+  const recipieToShow = recipie[recipieIndex];
+  const {favs,setFavs} = useContext(FavContext);
 
   const { register, handleSubmit } = useForm({
     defaultValues: recipieToShow || {}
@@ -19,7 +22,7 @@ const RecipieDetail = () => {
     const deletedRecipie = recipie.filter((_, index) => index !== recipieIndex)
     setRecipie(deletedRecipie)
     localStorage.setItem("recipie", JSON.stringify(deletedRecipie))
-    toast.success("Recipie Deleted Successfully")
+    toast.error("Recipie Deleted Successfully")
     navigate("/home")
   }
 
@@ -29,7 +32,20 @@ const RecipieDetail = () => {
     localStorage.setItem("recipie", JSON.stringify(updatedRecipies))
     toast.success("Recipie Updated successfully")
   }
-
+  const handleFavourite = () =>{
+    let recipieToAddTofav = recipie[recipieIndex];
+    localStorage.setItem("fav",JSON.stringify([recipieToAddTofav]));
+    setFavs([...favs,recipieToAddTofav])
+    setisFav(true);
+    
+  }
+  const handleUnFavourite = () =>{
+    let removeFav = favs.filter((_,index)=>(index!==recipieIndex));
+    setFavs(removeFav);
+    localStorage.setItem("fav",JSON.stringify(removeFav));     
+    setisFav(false);
+    
+  }
   return (
     <div className="flex flex-col lg:flex-row gap-10 p-6 bg-gray-50 min-h-screen">
       {/* Recipe Card */}
@@ -38,6 +54,15 @@ const RecipieDetail = () => {
         <div className="p-5">
           <h2 className="text-2xl font-bold text-gray-800">{recipieToShow.name}</h2>
           <p className="text-gray-600 mt-2">{recipieToShow.desc}</p>
+          <button
+            className=""
+          >
+           {isfav ?<i 
+           onClick={handleUnFavourite}
+           className="ri-heart-3-fill text-red-500"></i> :<i
+           onClick={handleFavourite}
+          className="ri-poker-hearts-line text-red-500"></i>}
+          </button>
           <span
             className={`inline-block mt-3 px-3 py-1 text-xs font-medium rounded-full ${
               recipieToShow.category === 'good'

@@ -20,6 +20,14 @@ const Navbar = () => {
       >
         Create
       </NavLink>
+      <NavLink
+        to="/fav"
+        className={({ isActive }) =>
+          `font-semibold text-lg transition-colors ${isActive ? 'text-red-500' : 'text-gray-700 hover:text-red-400'}`
+        }
+      >
+        Favourites
+      </NavLink>
     </div>
   );
 };
