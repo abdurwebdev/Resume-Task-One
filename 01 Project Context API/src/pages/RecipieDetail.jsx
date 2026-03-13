@@ -12,7 +12,7 @@ const RecipieDetail = () => {
   const [isfav, setisFav] = useState(false);
   const [recipie, setRecipie] = useContext(RecipieContext)
   const recipieToShow = recipie[recipieIndex];
-  const {favs,setFavs} = useContext(FavContext);
+  const {favs,setFavs,isfavs,setIsfav} = useContext(FavContext);
 
   const { register, handleSubmit } = useForm({
     defaultValues: recipieToShow || {}
@@ -36,15 +36,16 @@ const RecipieDetail = () => {
     let recipieToAddTofav = recipie[recipieIndex];
     localStorage.setItem("fav",JSON.stringify([recipieToAddTofav]));
     setFavs([...favs,recipieToAddTofav])
-    setisFav(true);
+    setIsfav(true);
+    localStorage.setItem("isFavie",JSON.stringify(true));
     
   }
   const handleUnFavourite = () =>{
     let removeFav = favs.filter((_,index)=>(index!==recipieIndex));
     setFavs(removeFav);
-    localStorage.setItem("fav",JSON.stringify(removeFav));     
-    setisFav(false);
-    
+    localStorage.setItem("fav",JSON.stringify(removeFav));  
+    setIsfav(false);   
+    localStorage.setItem("isFavie",JSON.stringify(false))
   }
   return (
     <div className="flex flex-col lg:flex-row gap-10 p-6 bg-gray-50 min-h-screen">
@@ -57,7 +58,7 @@ const RecipieDetail = () => {
           <button
             className=""
           >
-           {isfav ?<i 
+           {isfavs ?<i 
            onClick={handleUnFavourite}
            className="ri-heart-3-fill text-red-500"></i> :<i
            onClick={handleFavourite}

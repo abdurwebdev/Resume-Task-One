@@ -7,9 +7,10 @@ const FavProvider = ({ children }) => {
   const [favs, setFavs] = useState(
     JSON.parse(localStorage.getItem('fav')) || []
   );
+  const [isfavs, setIsfav] = useState(JSON.parse(localStorage.getItem("isFavie")) || false);
 
   return (
-    <FavContext.Provider value={{ favs, setFavs }}>
+    <FavContext.Provider value={{ favs, setFavs,isfavs,setIsfav }}>
       {children}
     </FavContext.Provider>
   );

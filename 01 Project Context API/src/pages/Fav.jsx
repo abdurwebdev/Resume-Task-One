@@ -1,15 +1,17 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useContext } from 'react'
+import { FavContext } from '../context/FavProvider'
 
 const Fav = () => {
   const [fav, setFav] = useState([])
-
+  const {isfavs} = useContext(FavContext);
+  console.log(isfavs,"ASDasdasdasdasdasd")
   // Load favorites from localStorage once on mount
   useEffect(() => {
     const storedFav = JSON.parse(localStorage.getItem("fav")) || []
     setFav(storedFav)
   }, [])
 
-  if (fav.length === 0) {
+  if (fav.length === 0 || !isfavs) {
     return <p className="p-5 text-gray-600">No favorites yet!</p>
   }
 
