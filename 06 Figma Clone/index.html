@@ -1,0 +1,207 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Figma Clone</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+
+<link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet"/>
+
+</head>
+
+<body class="h-screen w-screen overflow-hidden bg-[#1E1E1E] text-gray-200 font-sans">
+
+<!-- MAIN -->
+<div class="flex flex-col h-full w-full">
+
+<!-- TOP NAVBAR -->
+<div class="h-12 bg-[#2B2B2B] flex items-center justify-between px-4 border-b border-[#3a3a3a]">
+
+<div class="flex items-center gap-4">
+
+<i class="ri-figma-fill text-xl text-purple-500"></i>
+
+<div class="flex gap-2 text-sm">
+
+<button id="newFile" class="hover:bg-[#3c3c3c] px-2 py-1 rounded">File</button>
+<button id="editMenu" class="hover:bg-[#3c3c3c] px-2 py-1 rounded">Edit</button>
+<button id="viewMenu" class="hover:bg-[#3c3c3c] px-2 py-1 rounded">View</button>
+<button id="objectMenu" class="hover:bg-[#3c3c3c] px-2 py-1 rounded">Object</button>
+
+</div>
+
+</div>
+
+<div class="flex gap-4 items-center">
+
+<button id="undo"><i class="ri-arrow-go-back-line"></i></button>
+<button id="redo"><i class="ri-arrow-go-forward-line"></i></button>
+
+<button id="zoomOut"><i class="ri-subtract-line"></i></button>
+<button id="zoomIn"><i class="ri-add-line"></i></button>
+
+</div>
+
+</div>
+
+
+<!-- BODY -->
+<div class="flex flex-1 overflow-hidden">
+
+<!-- LEFT TOOLBAR -->
+<div class="w-14 bg-[#2B2B2B] border-r border-[#3a3a3a] flex flex-col items-center py-3 gap-4 text-lg">
+
+<button id="selectTool"><i class="ri-cursor-line"></i></button>
+<button id="moveTool"><i class="ri-drag-move-line"></i></button>
+<button id="frameTool"><i class="ri-layout-4-line"></i></button>
+<button id="rectangleTool"><i class="ri-rectangle-line"></i></button>
+<button id="circleTool"><i class="ri-checkbox-blank-circle-line"></i></button>
+<button id="lineTool"><i class="ri-subtract-line"></i></button>
+<button id="penTool"><i class="ri-pen-nib-line"></i></button>
+<button id="textTool"><i class="ri-text"></i></button>
+<button id="handTool"><i class="ri-hand"></i></button>
+
+</div>
+
+
+<!-- CANVAS AREA -->
+<div class="flex-1 relative overflow-hidden bg-[#1E1E1E]">
+
+<!-- GRID -->
+<div class="absolute inset-0 opacity-20 pointer-events-none"
+style="background-image:linear-gradient(#444 1px, transparent 1px),linear-gradient(90deg,#444 1px,transparent 1px);background-size:40px 40px;">
+</div>
+
+<!-- CANVAS -->
+<div id="canvas" class="absolute w-[4000px] h-[4000px]">
+
+<!-- elements will render here -->
+
+</div>
+
+</div>
+
+
+<!-- RIGHT PANEL -->
+<div class="w-[300px] bg-[#2B2B2B] border-l border-[#3a3a3a] flex flex-col">
+
+<!-- TABS -->
+<div class="flex border-b border-[#3a3a3a]">
+
+<button id="designTab" class="flex-1 py-2 text-sm hover:bg-[#3a3a3a]">Design</button>
+<button id="prototypeTab" class="flex-1 py-2 text-sm hover:bg-[#3a3a3a]">Prototype</button>
+<button id="inspectTab" class="flex-1 py-2 text-sm hover:bg-[#3a3a3a]">Inspect</button>
+
+</div>
+
+
+<!-- PROPERTIES -->
+<div class="flex-1 overflow-y-auto p-4 space-y-6 text-sm">
+
+<!-- POSITION -->
+<div>
+
+<h3 class="text-gray-400 mb-2">Position</h3>
+
+<div class="grid grid-cols-2 gap-2">
+
+<input id="posX" placeholder="X" class="bg-[#1E1E1E] p-1 rounded">
+<input id="posY" placeholder="Y" class="bg-[#1E1E1E] p-1 rounded">
+
+</div>
+
+</div>
+
+
+<!-- SIZE -->
+<div>
+
+<h3 class="text-gray-400 mb-2">Size</h3>
+
+<div class="grid grid-cols-2 gap-2">
+
+<input id="width" placeholder="W" class="bg-[#1E1E1E] p-1 rounded">
+<input id="height" placeholder="H" class="bg-[#1E1E1E] p-1 rounded">
+
+</div>
+
+</div>
+
+
+<!-- FILL -->
+<div>
+
+<h3 class="text-gray-400 mb-2">Fill</h3>
+
+<input type="color" id="fillColor" class="w-full h-8">
+
+</div>
+
+
+<!-- STROKE -->
+<div>
+
+<h3 class="text-gray-400 mb-2">Stroke</h3>
+
+<input type="color" id="strokeColor" class="w-full h-8">
+
+<input id="strokeWidth" placeholder="Stroke Width" class="bg-[#1E1E1E] p-1 rounded mt-2 w-full">
+
+</div>
+
+
+<!-- OPACITY -->
+<div>
+
+<h3 class="text-gray-400 mb-2">Opacity</h3>
+
+<input type="range" id="opacity" class="w-full">
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- BOTTOM PANEL -->
+<div class="h-36 bg-[#2B2B2B] border-t border-[#3a3a3a] flex">
+
+<!-- LAYERS -->
+<div class="w-[300px] border-r border-[#3a3a3a] p-3">
+
+<h3 class="text-sm text-gray-400 mb-2">Layers</h3>
+
+<ul id="layersList" class="space-y-1 text-sm">
+
+<!-- layers here -->
+
+</ul>
+
+</div>
+
+
+<!-- ASSETS -->
+<div class="flex-1 p-3">
+
+<h3 class="text-sm text-gray-400 mb-2">Assets</h3>
+
+<div id="assetsPanel" class="grid grid-cols-6 gap-2">
+
+</div>
+
+</div>
+  <script src="script.js"></script>
+</div>
+
+</div>
+
+</body>
+</html>
+
